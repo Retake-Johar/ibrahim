@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --bg-color: #22263b;
+    --main-color: #ee4b4c;
+    --text-color: #fff;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 25px 15%;
+    background: var(--bg-color);
+    transition: all .55s ease;
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 20px;
+    transition: all 0.6s ease;
+}
+
+.navlist a:hover{
+    color: var(--main-color);
+}
+
+.navlist a.effect{
+    color: var(--main-color);
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.nav-right .btn-1{
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+    background: var(--main-color);
+    padding: 7px 19px;
+    border-radius: 5px;
+    transition: all 0.6s ease;
+}
+.nav-right .btn-1:hover{
+    transform: translateY(-5px);
+}
+#menu-icon{
+    display: none;
+    font-size: 25px;
+    z-index: 10001;
+}
+
+section{
+    padding: 0 15%;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-text h1{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.home-text h1 span{
+    color: var(--main-color);
+}
+
+.home-text h4{ 
+    font-family: "Playwrite NZ", cursive;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.home-text .btn-2{
+    display: inline-block;
+    border: 1px solid var(--main-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.6s ease;
+}
+.home-text .btn-2:hover{
+   transform: translateY(-5px);
+}
+
+.home-img img{
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+}
+
+@media (max-width:1850px){
+    header{
+        padding: 20px 10%;
+    }
+
+    section{
+        padding: 80px 10% 0;
+    }
+}
+@media (max-width:1370px){
+    header{
+        padding: 20px 7%;
+    }
+
+    section{
+        padding: 80px 7% 0;
+    }
+}
+@media (max-width:1075px){
+    header{
+        padding: 20px 5%;
+    }
+
+    section{
+        padding: 80px 5% 0;
+    }
+
+    .navlist a{
+        margin: 0 15px;
+    }
+    
+    .home-text h1{
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    .home-img img{
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+}
+@media (max-width:800px){
+    .navlist{
+        position: absolute;
+        top: 0;
+        right: -100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: var(--bg-color);
+        height: 100vh;
+        width: 100%;
+        padding: 180px 0;
+        transition: all .2s ease-in-out;
+    }
+    .navlist a{
+        display: inline-block;
+        margin-bottom: 50px;
+        padding: 0;
+    }
+    .navlist.open{
+        right: 0;
+    }
+
+    #menu-icon{
+        display: block;
+        font-size: 29px;
+    }
+}
+@media (max-width:775px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    
+    .home-img img{
+        width: 370px;
+        height: auto;
+        border-radius: 15px;
+    }
+}
+@media (max-width:450px){
+    .home{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .home-img img{
+
+        width: 350px;
+        height: auto;
+        border-radius: 15px;
+    }
+    .home-text h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: start;
+    }
+    .logo{
+        font-size: 30px;
+    }
+}
+
+
